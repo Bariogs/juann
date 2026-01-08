@@ -1,0 +1,153 @@
+/* General Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #334155;
+}
+
+/* Card Container */
+.profile-card {
+    background: #ffffff;
+    width: 90%;
+    max-width: 400px;
+    padding: 40px 30px;
+    border-radius: 24px;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    transition: transform 0.3s ease;
+}
+
+.profile-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Header Section */
+.profile-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.profile-image-container {
+    position: relative;
+    width: 110px;
+    height: 110px;
+    margin: 0 auto 15px;
+    border-radius: 50%;
+    border: 4px solid #3b82f6;
+    padding: 3px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.profile-image-container:hover {
+    border-color: #2563eb;
+    box-shadow: 0 0 15px rgba(59, 130, 246, 0.5);
+}
+
+#profileDisplay {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 600;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.profile-image-container:hover .overlay {
+    opacity: 1;
+}
+
+h1 {
+    font-size: 1.5rem;
+    color: #1e293b;
+    margin-bottom: 5px;
+}
+
+.tagline {
+    font-size: 0.9rem;
+    color: #64748b;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+/* Info Sections */
+.info-section {
+    margin-top: 25px;
+    text-align: left;
+}
+
+h3 {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    color: #3b82f6;
+    margin-bottom: 12px;
+    letter-spacing: 1px;
+    border-bottom: 2px solid #f1f5f9;
+    padding-bottom: 5px;
+}
+
+.contact-info p, .address-box p {
+    font-size: 0.95rem;
+    margin-bottom: 8px;
+    color: #475569;
+}
+
+strong {
+    color: #1e293b;
+}
+
+/* Address Box styling */
+.address-box {
+    background: #f8fafc;
+    padding: 12px;
+    border-radius: 12px;
+    margin-top: 10px;
+}
+
+/* Certifications Styling */
+.cert-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #eff6ff;
+    padding: 12px 15px;
+    border-radius: 12px;
+    margin-bottom: 10px;
+    border-left: 4px solid #3b82f6;
+}
+
+.cert-box strong {
+    font-size: 0.85rem;
+    max-width: 70%;
+}
+
+.cert-box span {
+    font-size: 0.75rem;
+    font-weight: 700;
+    background: #3b82f6;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 6px;
+}

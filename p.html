@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>John Mark Barioga | Portfolio</title>
+    <link rel="stylesheet" href="p.css">
+</head>
+<body>
+
+    <div class="profile-card">
+        <header class="profile-header">
+            <div class="profile-image-container" onclick="document.getElementById('fileInput').click();">
+                <img id="profileDisplay" src="https://via.placeholder.com/100" alt="Profile Picture">
+                <div class="overlay">Click to Upload</div>
+            </div>
+            <input type="file" id="fileInput" style="display: none;" accept="image/*" onchange="previewImage(event)">
+            
+            <h1>John Mark Agias Barioga</h1>
+            <p class="tagline">Certified Technical Specialist</p>
+        </header>
+
+        <section class="info-section">
+            <h3>Contact & Personal Info</h3>
+            <div class="contact-info">
+                <p><strong>Phone:</strong> 09561569284</p>
+                <p><strong>Age:</strong> 24 | <strong>Status:</strong> Single</p>
+                <p><strong>Born:</strong> October 19, 2001</p>
+            </div>
+            
+            <div class="address-box">
+                <p><strong>Current:</strong> West Poblacion, Rizal, ZDN</p>
+                <p><strong>Hometown:</strong> Guisokan, Katipunan, ZDN</p>
+            </div>
+        </section>
+
+        <section class="info-section">
+            <h3>Certifications</h3>
+            <div class="cert-box">
+                <strong>Electrical Installation & Maintenance</strong>
+                <span>TESDA NC II</span>
+            </div>
+            <div class="cert-box">
+                <strong>Computer System Servicing (CSS)</strong>
+                <span>TESDA NC II</span>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        function previewImage(event) {
+            var reader = new FileReader();
+            reader.onload = function() {
+                var output = document.getElementById('profileDisplay');
+                output.src = reader.result;
+            }
+            reader.readAsDataURL(event.target.files[0]);
+        }
+    </script>
+</body>
+</html>
